@@ -1,0 +1,160 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* BODY */
+body {
+    background-color: #e9e9e9;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px; 
+}
+
+h1 {
+    font-size: 48px; 
+}
+  
+h2 {
+    font-size: 36px; 
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 15%;
+    margin-top: 50px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: block;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    color: #ccc;
+}
+
+/* ===== MAIN ===== */
+
+.content {
+    margin: 0 100px; 
+    background-color: #fff;
+}
+
+.info_heading {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+.info {
+    column-count: 3;
+    padding: 20px;
+    column-gap: 50px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+  
+h1, h2 {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    display: block;
+}
+
+/* ===== IMAGE GALLERY ===== */
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+  
+.featured-album {
+    flex: 1 1 49%;
+    margin-right: 1%;
+}
+  
+.featured-album img {
+    width: 100%;
+    height: auto;
+}
+  
+.album-cover {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 50%;
+}
+  
+.album-cover img {
+    width: 48%;
+    margin-bottom: 1%;
+}
+  
+.album-cover img:nth-child(2n) {
+    margin-left: 1%;
+}
+
+/* ===== THE AUTHOR ===== */
+
+.author {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.author-info {
+    display: grid;
+    grid-template-columns: 66% 34%;
+    align-items: center;
+    gap: 50px;
+    max-width: 100%;
+}
+
+.author-deets h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.authorpfp {
+    object-fit: cover;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color: #14181d;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%; 
+    box-sizing: border-box; 
+}
