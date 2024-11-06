@@ -2,44 +2,398 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Teko:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
 
-/* ===== GLOBAL ===== */
+/* ===== Global Colors and Backgrounds ===== */
+:root {
+    --background-color: #070410;
+    --header-color: #231651;
+    --text-color: #FFFFFF;
+    --highlight-color: #4DCCBD;
+    --button-color: #EEF36A;
+    --spacing-small: 16px;
+    --spacing-large-mobile: 16px;
+    --spacing-large-tablet: 32px;
+    --spacing-large-desktop: 48px;
+}
+
+/* ===== Reset and Body ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #a3a1a7;
+    background-color: var(--background-color);
     font-family: 'Lato', sans-serif;
+    color: var(--text-color);
 }
-h1 {
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-small);
+    background-color: var(--header-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 0px var(--highlight-color);
+    height: 15vh;
+    font-size: 3em;
+}
+header h1 {
     font-family: 'Teko', sans-serif;
-    font-weight: 700;
-    margin: 0px;
+    font-size: inherit;
+    margin: 0;
 }
+.nav a {
+    color: var(--text-color);
+    margin: 0 var(--spacing-small);
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+.logo {
+    font-family: 'Teko', sans-serif;
+    font-size: inherit;
+    margin: 0;
+    font-size: 3em;
+}
+.nav {
+    display: flex;
+    gap: 5px;
+}
+.search {
+    background-color: transparent;
+    border: 2px solid var(--button-color);
+    color: var(--text-color);
+    font-family: 'Teko', sans-serif;
+    padding: var(--spacing-small);
+    cursor: pointer;
+    padding: 10px 50px 10px 50px;
+    font-size: 2em;
+    border-radius: 15px;
+}
+
+/* ===== Main Content ===== */
 main {
     max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-large-desktop);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-small);
 }
-header {
-    box-shadow: #fff 5px;
-    font-size: 3em;
-    height: 50vh;
-    display:inline-block;
-    text-align:center;
+
+section {
+    background-color: var(--header-color);
+    margin: var(--spacing-small);
+    padding: var(--spacing-small);
+    color: var(--text-color);
+    box-shadow: 4px 4px 0px var(--highlight-color);
+    width: 100%;
+    box-sizing: border-box;
 }
-button {
+
+section h2 {
+    font-family: 'Teko', sans-serif;
+    color: var(--highlight-color);
+    font-size: 1.5em;
+}
+
+section p {
+    font-size: 1.5em;
+}
+
+/* ===== POSTER 1 ===== */
+.poster1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: var(--spacing-small);
+}
+.poster1 img {
+    width: 100%;
+    height: auto;
+}
+.desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.desc button {
+    padding: 25px 50px 25px 50px;
+}
+
+/* ===== POSTER 2 & 3 ===== */
+
+.poster2, .poster3 {
+    flex: 1 1 45%; 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-small);
+}
+
+.poster2 img, .poster3 img {
+    width: 100%;
+    height: auto;
+}
+
+.poster2 button, .poster3 button {
+    margin-top: auto;
     font-size: 2em;
+    padding: var(--spacing-small);
+}
+
+/* ===== POSTER 4, 5, & 6 ===== */
+
+.poster4, .poster5, .poster6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-small);
+    padding: var(--spacing-small);
+    background-color: var(--header-color);
+}
+.img3 {
+    object-fit: contain;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+}
+.poster4 button, .poster5 button, .poster6 button {
+    font-size: 2em;
+    padding: var(--spacing-small);
+    margin-top: auto; 
+}
+
+
+/* ===== Buttons ===== */
+button {
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    border: none;
     border-radius: 25px;
-    border: 2px solid #73AD21;
+    padding: var(--spacing-small);
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+button:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+
+/* ===== Images ===== */
 img {
-    border-radius: 50%;
-    display: none;
-}
-/* ===== Desktop (1024px and above) ===== */
-@media (min-width: 1024px) {
+    width: 100%;
+    height: auto;
 }
 
-/* ===== Tablet (720px - 1024px) ===== */
+/* ===== Responsive Design ===== */
+/* Mobile (360px - 720px) */
+@media (max-width: 720px) {
+    header {
+        font-size: 2em;
+        padding: 0px;
+        display: flex !important;
+        box-shadow: none;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .logo {
+        font-size: 2em;
+    }
+    .search {
+        font-size: 1.5em;
+        padding: 2px 15px 2px 15px;
+    }
+    .nav {
+        display: none;
+    }
+    main {
+        padding: 0px;
+        justify-items: center;
+        gap: 0px;
+    }
+    section {
+        flex: 1 1 100%; 
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        box-shadow: none;
+    }
+    section img {
+        width: 100%;
+        height: auto;
+    }
+    section p {
+        margin-bottom: var(--spacing-small);
+    }
+    section button {
+        margin-top: auto;
+        font-size: 2em;
+        padding: var(--spacing-small);
+    }.desc {
+        padding: 0px;
+        flex: 1 1 100%; 
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .desc button {
+        margin-top: auto;
+        font-size: 2em;
+        padding: var(--spacing-small);
+        width: 100%;
+    }
+    .desc p {
+        margin-bottom: 0px;
+    }
+    .poster1 h2, .poster2 h2, .poster3 h2 {
+        margin-top: var(--spacing-small);
+    }
+    .poster2, .poster3 {
+        flex: 1 1 100%; 
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--spacing-small);
+    }
+    .poster4, .poster5, .poster6 {
+        flex: 1 1 100%; 
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--spacing-small);
+    }
+    .img3 {
+        object-fit: contain;
+    }
+    .text {
+        padding: 0px;
+        flex: 1 1 100%; 
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .poster4 button, .poster5 button, .poster6 button {
+        font-size: 2em;
+        padding: var(--spacing-small);
+        margin-top: auto; 
+    }
+}
+
+/* Tablet (720px - 1024px) */
 @media (min-width: 720px) and (max-width: 1024px) {
+    header {
+        padding: var(--spacing-large-tablet);
+        gap: 0px;
+    }
+    main {
+        padding: var(--spacing-large-tablet);
+        justify-items: center;
+    }
+    .logo {
+        font-size: 1.5em;
+    }
+    .search {
+        font-size: 1em;
+        padding: 5px 20px 5px 20px;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 48px;
+    }
+    h1, h2 {
+        font-size: 3em; 
+    }
+    section {
+        flex: 1 1 50%; 
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--spacing-small);
+    }
+    section img {
+        width: 100%;
+        height: auto;
+    }
+    section button {
+        margin-top: auto;
+        font-size: 2em;
+        padding: var(--spacing-small);
+    }
+    .desc {
+        padding: 0px;
+        flex: 1 1 50%; 
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .desc button {
+        margin-top: auto;
+        font-size: 2em;
+        padding: var(--spacing-small);
+        width: 100%;
+    }
+    .poster1 h2, .poster2 h2, .poster3 h2 {
+        margin-top: var(--spacing-small);
+    }
+    .poster3 p, .poster4 p {
+        margin-bottom: var(--spacing-small);
+    }   
+    .poster4, .poster5, .poster6 {
+        flex: 1 1 50%; 
+        display: flex;
+        flex-direction: column;
+        margin-bottom: var(--spacing-small);
+    }
+    .img3 {
+        object-fit: contain;
+    }
+    .text {
+        padding: 0px;
+        flex: 1 1 50%; 
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .poster4 button, .poster5 button, .poster6 button {
+        font-size: 2em;
+        padding: var(--spacing-small);
+        margin-top: auto; 
+    }
 }
 
-/* ===== Mobile (360px - 720px) ===== */
-@media (min-width: 360px) and (max-width: 720px) {
-
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+    header {
+        font-size: 1.5em;
+        padding: var(--spacing-large-desktop);
+    }
+    
+    main {
+        padding: var(--spacing-large-desktop);
+    }
+    h1, h2 {
+        font-size: 3em;
+    }
+    section h2 {
+        margin-top: var(--spacing-small);
+    }
+    .poster2 p, .poster3 p {
+        margin-bottom: var(--spacing-small);
+    }
+    .poster4 h2, .poster5 h2, .poster6 h2 {
+        margin: 0px;
+    }
+    .poster4 p, .poster5 p, .poster6 p {
+        margin-bottom: var(--spacing-small);
+    }
+    
 }
